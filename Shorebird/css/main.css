@@ -1,0 +1,257 @@
+html {
+font-size: 62.5%;
+}
+
+body{ 
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+
+}
+
+.wrapper {
+max-width: 1200px;
+margin: 0 auto;
+
+}
+
+/*navbar*/ 
+
+header{
+
+    display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+nav {
+margin: 4em;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 4.1em;
+    margin: 0;
+}
+
+nav ul li a{
+text-decoration: none;
+color: black;
+text-transform: uppercase;
+font-size: 1.6rem;
+}
+
+/*hero section*/
+
+main{ 
+    display: flex;
+    gap: 8em;
+    margin-top: 11em;
+}
+
+.left-col{
+    
+    width: 45%;
+}
+.right-column{
+    display: grid;
+    
+}
+
+h1{
+    font-size: 5.2rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: normal;
+    margin: 0;
+}
+
+.subhead{
+    font-size: 1.8rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+}
+
+.cta-btns, .secondary-cta{
+    display: flex;
+    gap: 2em;
+}
+
+.primary-cta{
+    background-color: #f1e2d1;
+font-size: 1.8rem;
+font-weight: bold;
+color: black;
+text-decoration: none;
+border-radius: 1.9em;
+padding: 1em 2em;
+font-family: 'Poppins', sans-serif;
+
+}
+
+.secondary-cta{
+   background-color: #f1e2d1;
+   font-weight:bold;
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: black;
+    display: block;
+    border-radius: 1.9em;
+    padding: 1em 2em;
+    font-family: 'Poppins', sans-serif;
+   
+}
+
+
+.news{
+   
+    margin-top: 2em;
+    display: flex;
+    gap: 3em;
+    padding: 2em;
+    border: 1px solid black;
+    border-radius: 4em;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+
+
+}
+
+.news p.reviews1{
+    font-size: 3.3rem;
+line-height: 100%;
+}
+
+.news p.reviews{
+    font-style: italic;
+}
+
+.right-col {
+    flex-grow: 1;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas:
+        "left right"
+        "left bottom";
+}
+
+.card {
+    border-radius: 3em;
+    padding: 1.6em;
+    
+    display: flex;
+    align-items: end;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card1 {
+background-size: 200%;
+    background-position: center;   
+    grid-area: left;
+    position: relative;
+    background-image: url(../images/map.PNG)
+    
+    
+}
+
+.card1:before {
+position: absolute;
+    content: "";
+    background: url('https://assets.codepen.io/2621168/tag.sg') no-repeat;
+    width: 100%;
+    height: 100%;
+    top: 20px;
+    left: -30px;
+    pointer-events: none;
+    ;
+}
+
+.card2 {
+  background-position: center; 
+    grid-area: right;
+    background-image: url(../images/bike2.jpg);
+    background-size: 136%;
+}
+.card3 {
+   background-position: center;
+    grid-area: bottom;
+    background-image: url(../images/bike1.png);
+    background-size: 150%;
+}
+
+.card-details {
+ background-color: #f1e2d1;
+    border-radius: 1em;
+    padding: 2em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform .3s;
+}
+
+.card-details a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.card-details p {
+    font-size: 1.4rem;
+    margin: 0;
+}
+p.product-price {
+    font-size: 1.8rem;
+}
+
+nav ul li a:hover:before {
+    width: 35%;
+}
+
+.primary-cta:hover {
+    background: #e3e0c7;
+}
+
+.secondary-cta:hover svg {
+    transform: translateX(10px);
+}
+
+.card:hover {
+    background-size: 160%;
+}
+
+.card:hover .card-details {
+    transform: translateY(-20px);
+}
+
+/* Intro Animation */
+
+.overlay {
+    position: absolute;
+    z-index: 999;
+    background: white;
+    width: 100%;
+    height: 100%;
+    animation: reveal 1s ease-in forwards;
+    transform-origin: bottom;
+}
+
+@keyframes reveal {
+    from {
+        transform: scaleY(1);
+    }
+    to {
+        transform: scaleY(0);
+    }
+}
+
+main {
+    animation: growIn 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+    transform: scale(.4);
+}
+
+@keyframes growIn {
+    to {
+        transform: scale(1);
+    }
+}
